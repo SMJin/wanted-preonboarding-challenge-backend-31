@@ -2,11 +2,16 @@ package com.wanted.ecommerce.product.domain;
 
 import com.wanted.ecommerce.product.domain.status.ProductStatus;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 
 @Entity
+@ToString @Getter
+@NoArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
