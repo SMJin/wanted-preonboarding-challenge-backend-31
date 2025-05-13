@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String name;
 
@@ -29,11 +29,11 @@ public class Product {
     private String fullDescription;
     private LocalDate createdAt;
     private LocalDate updatedAt;
-    private int sellerId;
-    private int brandId;
+    private Long sellerId;
+    private Long brandId;
     private ProductStatus status;
 
-    public Product(String name, int sellerId, int brandId) {
+    public Product(String name, Long sellerId, Long brandId) {
         this.name = name;
         LocalDate now = LocalDate.now();
         this.createdAt = now;
